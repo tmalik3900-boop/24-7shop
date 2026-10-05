@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="24/7 Shop - Mobile Parts & Accessories">
+  <title>24/7 Shop — Mobile Parts & Accessories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#"><span>24/7</span> Shop</a>
+    <div class="search"><input id="search" placeholder="Search mobile parts & accessories..." aria-label="Search products"><button onclick="filterProducts()">Search</button></div>
+    <button class="cartBtn" onclick="openCart()">🛒 Cart <b id="cartCount">0</b></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container heroGrid">
+      <div>
+        <p class="eyebrow">MOBILE PARTS & ACCESSORIES</p>
+        <h1>Your mobile shop,<br><strong>open 24/7.</strong></h1>
+        <p class="lead">Quality parts, displays, batteries, charging items and accessories. Order easily on WhatsApp.</p>
+        <div class="heroBtns">
+          <a class="btn primary" href="#products">Shop Now</a>
+          <a class="btn light" href="https://wa.me/923337400125?text=Assalam-o-Alaikum%2C%20I%20want%20to%20ask%20about%20a%20product." target="_blank">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="heroCard">
+        <div class="circle">24/7</div>
+        <h3>Fast Ordering</h3>
+        <p>Send your order directly to our WhatsApp.</p>
+        <small>📞 0333-7400125</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="sectionHead"><h2>Categories</h2></div>
+    <div class="cats">
+      <button onclick="setCategory('All')">All</button>
+      <button onclick="setCategory('Displays')">📱 Displays</button>
+      <button onclick="setCategory('Batteries')">🔋 Batteries</button>
+      <button onclick="setCategory('Charging')">⚡ Charging</button>
+      <button onclick="setCategory('Accessories')">🎧 Accessories</button>
+      <button onclick="setCategory('Parts')">🔧 Parts</button>
+    </div>
+  </section>
+
+  <section id="products" class="container section">
+    <div class="sectionHead"><h2>Featured Products</h2><span id="resultText"></span></div>
+    <div id="productsGrid" class="products"></div>
+  </section>
+</main>
+
+<div id="overlay" class="overlay" onclick="closeCart(event)">
+  <aside class="drawer" onclick="event.stopPropagation()">
+    <div class="drawerHead"><h2>Your Cart</h2><button onclick="closeCart()">✕</button></div>
+    <div id="cartItems"></div>
+    <div class="total"><span>Total</span><strong id="cartTotal">Rs. 0</strong></div>
+    <button class="btn primary full" onclick="checkout()">Order on WhatsApp</button>
+    <p class="note">Cash on Delivery, JazzCash & Easypaisa can be arranged after confirmation.</p>
+  </aside>
+</div>
+
+<footer>
+  <div class="container footerGrid">
+    <div><div class="brand"><span>24/7</span> Shop</div><p>Mobile Parts & Accessories</p></div>
+    <div><b>Order on WhatsApp</b><p>0333-7400125</p></div>
+    <div><b>Delivery</b><p>Leopard Courier</p></div>
+  </div>
+  <div class="copy">© 2026 24/7 Shop. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
